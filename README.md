@@ -18,7 +18,7 @@ The service is designed for the telegram channel
 ![Admin Panel](readme_images/Real%20Esate%20Bot%20Admin.png)
 *View of the administrative panel in the browser*
 
-## Технологический стек проекта
+## The technological stack of the project
 
 ![Python](https://img.shields.io/badge/-Python-black?style=for-the-badge&logo=python)
 ![Aiogram](https://img.shields.io/badge/-Aiogram-black?style=for-the-badge&logo=telegram)
@@ -51,7 +51,7 @@ Scripts are run every 24 hours to collect real estate data from the following we
 - [halooglasi](https://www.halooglasi.com/)
 - [nekretnine](https://www.nekretnine.rs/)
 
-## Структура работы сервиса
+## The structure of the service
 
 The service consists of several microservices:
 
@@ -166,7 +166,7 @@ Follow the instructions below to set up your gmail account to work with the app.
 
 *If you want to use another SMTP Server, for example yandex, you need to change the value of the EMAIL_HOST and EMAIL_PORT variables in django_api/django_api/settings.py and set up a yandex account, for example, [according to this instruction] (https://proghunter.ru/articles/setting-up-the-smtp-mail-service-for-yandex-in-django ).*
 
-### Deplo
+### Deployment
 
 After cloning the repository to your computer.
 
