@@ -1,0 +1,12 @@
+/venv
+/venv.bak
+venv
+.env
+*.env
+__pycache__
+sql_app.db
+.db
+db.sqlite3
+# ignore all json files in real_esate_scraper repository and any of its subdirectories
+/real_estate_scraper/**/*.json
+/real_estate_scraper/**/*.csv

@@ -1,0 +1,9 @@
+.idea  
+.vscode  
+.git  
+**/__pycache__
+.env
+venv
+/venv
+.json
+.csv

@@ -1,0 +1,78 @@
+volumes:
+  postgres_data:
+  static:
+
+networks:
+  real_estate:
+
+services:
+  db:
+    image: postgres:13.10
+    env_file:
+      - .env
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      retries: 5
+      start_period: 30s
+      timeout: 10s
+    networks:
+      - real_estate
+
+  api:
+    build: ./django_api/
+
+    env_file:
+      - .env
+    volumes:
+      - static:/backend_static/
+    depends_on:
+      db:
+        condition: service_healthy
+        restart: true
+    healthcheck:
+      test: curl --fail http://localhost:8000/api/ || exit 1
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - real_estate
+
+  bot:
+    build: ./bot/
+    env_file:
+      - .env
+    depends_on:
+      api: 
+        condition: service_started
+    networks:
+      - real_estate
+
+  scraper:
+    build: ./real_estate_scraper/
+    env_file:
+      - .env
+    depends_on:
+      api:
+        condition: service_healthy
+        restart: true
+    networks:
+      - real_estate
+
+  nginx:
+    build: ./nginx/
+    env_file:
+      - .env
+    ports:
+      - 80:80
+    volumes:
+      - static:/staticfiles/
+    depends_on:
+      - db
+      - api
+    networks:
+      - real_estate

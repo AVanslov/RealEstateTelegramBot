@@ -1,0 +1,274 @@
+[
+{
+  "model": "api.language",
+  "pk": 1,
+  "fields": {
+    "name": "English",
+    "code": "EN"
+  }
+},
+{
+  "model": "api.language",
+  "pk": 2,
+  "fields": {
+    "name": "Russian",
+    "code": "RU"
+  }
+},
+{
+  "model": "api.customer",
+  "pk": 1,
+  "fields": {
+    "telegram_id": 11,
+    "username": "alexander",
+    "language": 1
+  }
+},
+{
+  "model": "api.customer",
+  "pk": 2,
+  "fields": {
+    "telegram_id": 12,
+    "username": "test",
+    "language": 1
+  }
+},
+{
+  "model": "api.customer",
+  "pk": 3,
+  "fields": {
+    "telegram_id": 13,
+    "username": "test1",
+    "language": 1
+  }
+},
+{
+  "model": "api.city",
+  "pk": 1,
+  "fields": {
+    "name": "Belgrade"
+  }
+},
+{
+  "model": "api.city",
+  "pk": 2,
+  "fields": {
+    "name": "Valjevo"
+  }
+},
+{
+  "model": "api.city",
+  "pk": 3,
+  "fields": {
+    "name": "Vrnjačka Banja"
+  }
+},
+{
+  "model": "api.city",
+  "pk": 4,
+  "fields": {
+    "name": "Zrenjanin"
+  }
+},
+{
+  "model": "api.city",
+  "pk": 5,
+  "fields": {
+    "name": "Loznica"
+  }
+},
+{
+  "model": "api.city",
+  "pk": 6,
+  "fields": {
+    "name": "Kraljevo"
+  }
+},
+{
+  "model": "api.city",
+  "pk": 7,
+  "fields": {
+    "name": "Kragujevac"
+  }
+},
+{
+  "model": "api.city",
+  "pk": 8,
+  "fields": {
+    "name": "Niš"
+  }
+},
+{
+  "model": "api.city",
+  "pk": 9,
+  "fields": {
+    "name": "Novi Sad"
+  }
+},
+{
+  "model": "api.city",
+  "pk": 10,
+  "fields": {
+    "name": "Pančevo"
+  }
+},
+{
+  "model": "api.city",
+  "pk": 11,
+  "fields": {
+    "name": "Pirot"
+  }
+},
+{
+  "model": "api.city",
+  "pk": 12,
+  "fields": {
+    "name": "Sombor"
+  }
+},
+{
+  "model": "api.city",
+  "pk": 13,
+  "fields": {
+    "name": "Subotica"
+  }
+},
+{
+  "model": "api.city",
+  "pk": 14,
+  "fields": {
+    "name": "Užice"
+  }
+},
+{
+  "model": "api.city",
+  "pk": 15,
+  "fields": {
+    "name": "Čačak"
+  }
+},
+{
+  "model": "api.city",
+  "pk": 16,
+  "fields": {
+    "name": "Šabac"
+  }
+},
+{
+  "model": "api.city",
+  "pk": 17,
+  "fields": {
+    "name": "Jagodina"
+  }
+},
+{
+  "model": "api.category",
+  "pk": 1,
+  "fields": {
+    "name": "House"
+  }
+},
+{
+  "model": "api.category",
+  "pk": 2,
+  "fields": {
+    "name": "Apartment"
+  }
+},
+{
+  "model": "api.category",
+  "pk": 3,
+  "fields": {
+    "name": "Apartment in the house"
+  }
+},
+{
+  "model": "api.searchparameter",
+  "pk": 1,
+  "fields": {
+    "customer": 1,
+    "category": 1,
+    "city": 1,
+    "min_price": 9,
+    "max_price": 10,
+    "min_area": 10,
+    "max_area": 12,
+    "rooms_number": 3.0,
+    "pub_date_time": "2024-09-07T07:34:53.182Z"
+  }
+},
+{
+  "model": "api.searchparameter",
+  "pk": 2,
+  "fields": {
+    "customer": 3,
+    "category": 1,
+    "city": 1,
+    "min_price": 0,
+    "max_price": 10,
+    "min_area": 0,
+    "max_area": 100,
+    "rooms_number": 2.0,
+    "pub_date_time": "2024-09-07T07:34:53.182Z"
+  }
+},
+{
+  "model": "api.searchparameter",
+  "pk": 3,
+  "fields": {
+    "customer": 2,
+    "category": 1,
+    "city": 1,
+    "min_price": 0,
+    "max_price": 20,
+    "min_area": 0,
+    "max_area": 15,
+    "rooms_number": 3.0,
+    "pub_date_time": "2024-09-07T07:34:53.182Z"
+  }
+},
+{
+  "model": "api.currency",
+  "pk": 1,
+  "fields": {
+    "name": "Euro",
+    "code": "EUR"
+  }
+},
+{
+  "model": "api.realty",
+  "pk": 1,
+  "fields": {
+    "category": 1,
+    "city": 1,
+    "additional_info": null,
+    "title": "Beautiful home near lake",
+    "description": "",
+    "currency": 1,
+    "price": 1000,
+    "area": 100,
+    "rooms_number": 3.0,
+    "image_url": "https://img.cityexpert.rs/sites/default/files/styles/1280x/public/image/cityexpert.rs_-_nekretnina_id_-_51334_-_0860_-_20220907_0.jpg",
+    "url": "https://www.django-rest-framework.org/tutorial/3-class-based-views/#using-generic-class-based-views",
+    "pub_date_time": "2024-09-05T15:19:37.336Z"
+  }
+},
+{
+  "model": "api.realty",
+  "pk": 2,
+  "fields": {
+    "category": 1,
+    "city": 1,
+    "additional_info": null,
+    "title": null,
+    "description": "smth",
+    "currency": 1,
+    "price": 1000,
+    "area": 100,
+    "rooms_number": 3.0,
+    "image_url": "https://img.cityexpert.rs/sites/default/files/styles/1280x/public/image/cityexpert.rs_-_nekretnina_id_-_66042_-_0289_-_20240819.jpg",
+    "url": "https://hh.ru/vacancy/104650549",
+    "pub_date_time": "2024-09-06T07:05:23.841Z"
+  }
+}
+]
